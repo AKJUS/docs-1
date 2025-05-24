@@ -7,7 +7,9 @@
     "heroku-prebuild": "bash prebuild.sh",
     "heroku-postbuild": "bash postbuild.sh",
     "precommit": "lint-staged",
-    "clean-redirects": "npx jscodeshift -t codemods/clean-redirects-config.js config/redirects.js"
+    "clean-redirects": "npx jscodeshift -t codemods/clean-redirects-config.js config/redirects.js",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "lint-staged": {
     "*.md": "markdownlint"
@@ -18,14 +20,17 @@
   },
   "devDependencies": {
     "commander": "^2.8.1",
-    "husky": "^0.13.3",
-    "imagemin": "^4.0.0",
-    "imagemin-optipng": "^4.3.0",
-    "jscodeshift": "^0.13.0",
-    "lint-staged": "^3.4.2",
-    "markdownlint": "^0.13.0",
-    "markdownlint-cli": "^0.15.0",
+    "husky": "^0.14.0",
+    "imagemin": "^5.0.0",
+    "imagemin-optipng": "^6.0.0",
+    "jscodeshift": "^17.1.0",
+    "lint-staged": "^9.0.0",
+    "markdownlint": "^0.32.0",
+    "markdownlint-cli": "^0.38.0",
     "prettier": "^2.4.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
