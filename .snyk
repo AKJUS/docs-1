@@ -1,0 +1,12 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:tunnel-agent:20170305':
+    - imagemin-optipng > optipng-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2025-02-15T16:15:24.685Z'
+        id: 'npm:tunnel-agent:20170305'
+        path: >-
+          imagemin-optipng > optipng-bin > bin-build > download > caw >
+          tunnel-agent
